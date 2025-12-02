@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      NHẤT TÂM - Đồng hành cùng phát triển | Tư vấn Thuế Kế Toán TP.HCM
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      :root {
+        --primary-color: #277A2C;
+        --secondary-color: #e74c3c;
+        --accent-color: #3498db;
+        --light-color: #ecf0f1;
+        --dark-color: #1E6124;
+        --success-color: #27ae60;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      body {
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+        overflow-x: hidden;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Header & Navigation */
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: var(--shadow);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        width: 200px;
+      }
+
+      .logo span {
+        color: var(--secondary-color);
+         margin-left: 8px;
+
+      }
+
+      .logo i {
+        margin-right: 10px;
+        color: var(--secondary-color);
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-menu li {
+        margin-left: 2rem;
+      }
+
+      .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+        padding: 5px 0;
+        position: relative;
+      }
+
+      .nav-menu a:hover {
+        color: var(--secondary-color);
+      }
+
+      .nav-menu a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--secondary-color);
+        transition: var(--transition);
+      }
+
+      .nav-menu a:hover::after {
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            rgba(44, 62, 80, 0.9),
+            rgba(44, 62, 80, 0.8)
+          ),
+          url("images/background.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 150px 0 100px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        opacity: 0.9;
+      }
+
+      .highlight {
+        color: var(--secondary-color);
+        font-weight: bold;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+
+      .cta-button:hover {
+        background-color: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+      }
+
+      /* Animation Section */
+      .animation-section {
+        background-color: white;
+        padding: 80px 0;
+        overflow: hidden;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--primary-color);
+      }
+
+      .section-title h2 {
+        font-size: 2.2rem;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--secondary-color);
+      }
+
+      .animation-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .animation-content {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .animation-box {
+        flex: 1;
+        min-width: 300px;
+        height: 400px;
+        position: relative;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      /* Accounting Animation Elements */
+      .accounting-element {
+        position: absolute;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        transition: var(--transition);
+      }
+
+      .calculator {
+        width: 80px;
+        height: 60px;
+        top: 50px;
+        left: 30px;
+        animation: float 4s ease-in-out infinite;
+      }
+
+      .document {
+        width: 100px;
+        height: 80px;
+        top: 150px;
+        right: 170px;
+        animation: float 5s ease-in-out infinite 0.5s;
+      }
+
+      .chart {
+        width: 120px;
+        height: 90px;
+        bottom: 80px;
+        left: 50px;
+        animation: float 6s ease-in-out infinite 1s;
+      }
+
+      .tax {
+        width: 70px;
+        height: 70px;
+        top: 40px;
+        right: 100px;
+        animation: float 4.5s ease-in-out infinite 1.5s;
+      }
+
+      .money {
+        width: 90px;
+        height: 70px;
+        bottom: 80px;
+        right: 60px;
+        animation: float 5.5s ease-in-out infinite 2s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      /* Services Section - Hiển thị tất cả */
+      .services {
+        padding: 80px 0;
+        background-color: #f1f8ff;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .service-category {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+
+      .service-category:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .service-header i {
+        font-size: 2rem;
+        margin-right: 15px;
+        color: var(--secondary-color);
+      }
+
+      .service-header h3 {
+        font-size: 1.5rem;
+      }
+
+      .service-content {
+        padding: 1.5rem;
+      }
+
+      .service-list {
+        list-style-type: none;
+      }
+
+      .service-list li {
+        padding: 10px 0;
+        border-bottom: 1px dashed #eee;
+        display: flex;
+        align-items: center;
+      }
+
+      .service-list li:last-child {
+        border-bottom: none;
+      }
+
+      .service-list li i {
+        color: var(--success-color);
+        margin-right: 10px;
+        font-size: 0.9rem;
+      }
+
+      .services-highlight {
+        background: linear-gradient(135deg, var(--primary-color), #1a2530);
+        color: white;
+        padding: 3rem;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .services-highlight h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .services-highlight p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        opacity: 0.9;
+      }
+
+      /* Contact Section */
+      .contact {
+        padding: 80px 0;
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+      }
+
+      .contact-info,
+      .contact-form {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .contact-info h3 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+      }
+
+      .contact-detail {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-detail i {
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+        margin-right: 15px;
+        width: 30px;
+      }
+
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+      }
+
+      .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      /* Experience Badge */
+      .experience-badge {
+        position: absolute;
+        top: 100px;
+        right: 20px;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 15px;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .experience-badge .years {
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      .experience-badge .text {
+        font-size: 0.9rem;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .copyright {
+        opacity: 0.8;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.2rem;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--secondary-color);
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .hero-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .animation-container {
+          flex-direction: column;
+        }
+
+        .experience-badge {
+          position: relative;
+          top: 0;
+          right: 0;
+          margin: 2rem auto;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-menu {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          flex-direction: column;
+          background-color: var(--primary-color);
+          width: 100%;
+          text-align: center;
+          transition: 0.3s;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+          padding: 2rem 0;
+          z-index: 999;
+          min-height: 100vh;
+        }
+
+        .nav-menu.active {
+          left: 0;
+        }
+
+        .nav-menu li {
+          margin: 1.5rem 0;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .hero {
+          padding: 120px 0 80px;
+        }
+
+        .hero-content h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .services-highlight {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav-container">
+        <a href="#" class="logo">
+           <i class="fas fa-calculator"></i>
+          NHẤT<span>TÂM</span>
+    
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#services">Dịch vụ</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <h1>TƯ VẤN HỖ TRỢ THÀNH LẬP CÔNG TY & THUẾ KẾ TOÁN TẠI TP.HCM</h1>
+        <p>
+          <span class="highlight">NHẤT TÂM</span> với
+          <span class="highlight">20 năm kinh nghiệm</span> trong công tác kế
+          toán, là một sự lựa chọn đáng tin cậy cho các doanh nghiệp và cá nhân
+          có nhu cầu hỗ trợ về quản lý thuế và kế toán.
+        </p>
+        <p>
+          Đảm bảo sự chính xác và tinh thần tỉ mỉ trong công việc, bạn có thể
+          yên tâm rằng số liệu và thông tin được xử lý chính xác và không bị sai
+          sót.
+        </p>
+        <a href="#contact" class="cta-button">LIÊN HỆ TƯ VẤN NGAY</a>
+      </div>
+
+      <div class="experience-badge">
+        <div class="years">20+</div>
+        <div class="text">Năm kinh nghiệm</div>
+      </div>
+    </section>
+
+    <!-- About & Animation Section -->
+    <section class="animation-section" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Đồng Hành Cùng Phát Triển</h2>
+        </div>
+
+        <div class="animation-container">
+          <div class="animation-content">
+            <h3>Chuyên nghiệp - Tận tâm - Chính xác</h3>
+            <p>
+              Chúng tôi chuyên setup hệ thống kế toán và gỡ rối sổ sách, hỗ trợ
+              quyết toán thuế cho các doanh nghiệp tại Hồ Chí Minh và các tỉnh
+              lân cận.
+            </p>
+            <p>
+              Mang lại sự tiện lợi và tiết kiệm thời gian, bạn có thể tập trung
+              vào hoạt động kinh doanh chính của mình mà không cần phải lo lắng
+              về các nhiệm vụ phức tạp liên quan đến thuế và kế toán.
+            </p>
+            <a href="#services" class="cta-button">XEM DỊCH VỤ CHI TIẾT</a>
+          </div>
+
+          <div class="animation-box">
+            <!-- Accounting Animation Elements -->
+            <div class="accounting-element calculator">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="accounting-element document">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="accounting-element chart">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="accounting-element tax">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <div class="accounting-element money">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section - Hiển thị tất cả -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Dịch Vụ Chuyên Nghiệp</h2>
+          <p>Đa dạng dịch vụ hỗ trợ doanh nghiệp toàn diện</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Dịch vụ kế toán -->
+          <div class="service-category">
+            <div class="service-header">
+              <i class="fas fa-calculator"></i>
+              <h3>Dịch vụ kế toán</h3>
+            </div>
+            <div class="service-content">
+              <ul class="service-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Dịch vụ Kế toán Thuế trọn
+                  gói
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Dịch vụ Kế toán trưởng
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Dịch vụ Kế toán nội bộ
+                  chuyên sâu
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Tư vấn, thiết lập Hệ thống
+                  kế toán
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Kiểm tra, hoàn thiện sổ
+                  sách kế toán
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Lập báo cáo tài chính cuối
+                  năm
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dịch vụ thuế -->
+          <div class="service-category">
+            <div class="service-header">
+              <i class="fas fa-landmark"></i>
+              <h3>Dịch vụ thuế</h3>
+            </div>
+            <div class="service-content">
+              <ul class="service-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Tư vấn thuế; đánh giá các
+                  rủi ro về thuế
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Rà soát tính tuân thủ về
+                  pháp luật thuế
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Quyết toán thuế cuối năm
+                  cho doanh nghiệp
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Quyết toán thuế TNCN
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Dich vụ Đại diện giải
+                  trình Quyết toán thuế
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Dịch vụ Hoàn thuế GTGT
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dịch vụ nhân sự -->
+          <div class="service-category">
+            <div class="service-header">
+              <i class="fas fa-users"></i>
+              <h3>Dịch vụ nhân sự</h3>
+            </div>
+            <div class="service-content">
+              <ul class="service-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Tư vấn tuân thủ về pháp
+                  luật lao động
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Dịch vụ Nhân sự ban đầu
+                  (bao gồm BHXH)
+                </li>
+                <li><i class="fas fa-check-circle"></i> Dịch vụ Tính lương</li>
+                <li><i class="fas fa-check-circle"></i> PAYROLL Service</li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Theo dõi trích nộp BHXH,
+                  thuế TNCN
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thủ tục lao động, bảo hiểm
+                  với CQ NN
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Giải quyết chế độ, quyền
+                  lợi BHXH
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dịch vụ thành lập -->
+          <div class="service-category">
+            <div class="service-header">
+              <i class="fas fa-building"></i>
+              <h3>Dịch vụ thành lập</h3>
+            </div>
+            <div class="service-content">
+              <ul class="service-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Thành lập công ty cổ phần
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thành lập công ty TNHH
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thành lập văn phòng đại
+                  diện
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thành lập chi nhánh công
+                  ty
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Dịch vụ thay đổi GPKD
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Thay đổi thông tin công ty -->
+          <div class="service-category">
+            <div class="service-header">
+              <i class="fas fa-edit"></i>
+              <h3>Thay đổi tên công ty</h3>
+            </div>
+            <div class="service-content">
+              <ul class="service-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Thay đổi tên công ty
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thay đổi địa chỉ công ty
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thay đổi vốn điều lệ
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thay đổi ngành nghề kinh
+                  doanh
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thay đổi loại hình công ty
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Thay đổi đại diện pháp
+                  luật
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dịch vụ bổ sung (nếu cần) -->
+          <div class="service-category">
+            <div class="service-header">
+              <i class="fas fa-headset"></i>
+              <h3>Hỗ trợ & Tư vấn</h3>
+            </div>
+            <div class="service-content">
+              <ul class="service-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Tư vấn chiến lược tài
+                  chính
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Hỗ trợ đối soát và kiểm
+                  tra
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Tư vấn pháp lý doanh
+                  nghiệp
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Setup quy trình kế toán
+                  nội bộ
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Đào tạo nhân viên kế toán
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Hỗ trợ 24/7 cho doanh
+                  nghiệp
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-highlight">
+          <h3>Tại sao chọn NHẤT TÂM?</h3>
+          <p>
+            Với hơn 20 năm kinh nghiệm, chúng tôi cam kết mang đến dịch vụ
+            chuyên nghiệp, chính xác và tận tâm. Đội ngũ chuyên gia giàu kinh
+            nghiệm của chúng tôi luôn sẵn sàng hỗ trợ doanh nghiệp bạn phát
+            triển bền vững.
+          </p>
+          <a href="#contact" class="cta-button">NHẬN TƯ VẤN MIỄN PHÍ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Liên Hệ Với Chúng Tôi</h2>
+          <p>Để được tư vấn và hỗ trợ tốt nhất</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Thông Tin Liên Hệ</h3>
+
+            <div class="contact-detail">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h4>Hotline</h4>
+                <p>
+                  <a
+                    href="tel:0343716306"
+                    style="color: white; text-decoration: none"
+                    >0343.716.306</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>
+                  <a
+                    href="mailto:ketoannhattam2002@gmail.com"
+                    style="color: white; text-decoration: none"
+                    >ketoannhattam2002@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Khu vực hoạt động</h4>
+                <p>TP.HCM và các tỉnh lân cận</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Thời gian làm việc</h4>
+                <p>Thứ 2 - Thứ 7: 8:00 - 17:00</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <i class="fas fa-star"></i>
+              <div>
+                <h4>Cam kết</h4>
+                <p>Chính xác - Tận tâm - Chuyên nghiệp</p>
+              </div>
+            </div>
+
+            <a
+              href="tel:0343716306"
+              class="cta-button"
+              style="margin-top: 20px"
+            >
+              <i class="fas fa-phone-alt"></i> GỌI NGAY: 0343.716.306
+            </a>
+          </div>
+
+          <div class="contact-form">
+            <h3>Gửi yêu cầu tư vấn</h3>
+            <form id="consultationForm">
+              <div class="form-group">
+                <input type="text" placeholder="Họ và tên" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Số điện thoại" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <select
+                  style="
+                    width: 100%;
+                    padding: 12px 15px;
+                    border-radius: 5px;
+                    border: 1px solid #ddd;
+                    font-size: 1rem;
+                  "
+                >
+                  <option value="">Chọn dịch vụ quan tâm</option>
+                  <option value="accounting">Dịch vụ kế toán</option>
+                  <option value="tax">Dịch vụ thuế</option>
+                  <option value="hr">Dịch vụ nhân sự</option>
+                  <option value="establish">Dịch vụ thành lập công ty</option>
+                  <option value="change">Thay đổi thông tin công ty</option>
+                  <option value="all">Tất cả dịch vụ</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Nội dung yêu cầu tư vấn"></textarea>
+              </div>
+              <button type="submit" class="cta-button">
+                GỬI YÊU CẦU TƯ VẤN
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="copyright">
+          <p>
+            &copy; 2023 NHẤT TÂM - Đồng hành cùng phát triển. All rights
+            reserved.
+          </p>
+          <p>Chuyên tư vấn thành lập công ty & thuế kế toán tại TP.HCM</p>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-zalo"></i></a>
+          <a href="tel:0343716306"><i class="fas fa-phone-alt"></i></a>
+          <a href="mailto:ketoannhattam2002@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const navMenu = document.getElementById("navMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        mobileMenuBtn.innerHTML = navMenu.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+
+      // Form submission
+      const consultationForm = document.getElementById("consultationForm");
+      consultationForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert(
+          "Cảm ơn bạn đã gửi yêu cầu tư vấn! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất."
+        );
+        this.reset();
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Animation on scroll for service cards
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe service cards for animation
+      document.querySelectorAll(".service-category").forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        card.style.transitionDelay = `${index * 0.1}s`;
+
+        observer.observe(card);
+      });
+
+      // Add hover effect to service cards
+      document.querySelectorAll(".service-category").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-10px)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0)";
+        });
+      });
+    </script>
+  </body>
+</html>
